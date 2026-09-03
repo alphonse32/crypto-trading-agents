@@ -36,8 +36,8 @@ RAW_DIR = DATA_DIR / "raw"
 CLEAN_DIR = DATA_DIR / "clean"
 REPORT_DIR = DATA_DIR / "reports"
 
-KLINE_URL = "https://api.binance.com/api/v3/klines"
-SERVER_TIME_URL = "https://api.binance.com/api/v3/time"
+KLINE_URL = "https://data-api.binance.vision/api/v3/klines"
+SERVER_TIME_URL = "https://data-api.binance.vision/api/v3/time"
 
 # Durée d'un intervalle en millisecondes (intervalles Binance supportés).
 INTERVAL_MS = {

@@ -89,4 +89,4 @@ seul → à améliorer (features, modèle, filtrage par le Risk) avant d'entrer 
 ## Prérequis
 
 - Python 3.10+ (testé sur 3.14). Agent ML : numpy, pandas, scikit-learn.
-- Accès réseau à `api.binance.com` (données publiques, aucune clé requise).
+- Accès réseau à `data-api.binance.vision` (données publiques Binance, sans restriction géographique).
