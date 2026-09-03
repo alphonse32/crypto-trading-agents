@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Données volumineuses (30 Mo de CSV historiques — pas à versionner)
+data/raw/
+data/clean/
+data/reports/
+
+# Fichiers temporaires
+_pdf_extrait.txt
+
+# NB : data/paper/ (l'état du paper trading) DOIT rester versionné.
