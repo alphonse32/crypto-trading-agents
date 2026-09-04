@@ -16,12 +16,12 @@
   "day_start_equity": 10000.0,
   "trades": [],
   "journal": [],
-  "last_processed_time": 1788498000000,
+  "last_processed_time": 1788516000000,
   "created_at": "2026-09-03T00:26:54Z",
-  "updated_at": "2026-09-04T06:04:16Z",
-  "last_close": 2509.25,
+  "updated_at": "2026-09-04T11:12:05Z",
+  "last_close": 2526.52,
   "mtm_equity": 10000.0,
   "signal": 0,
-  "sma_fast": 2432.66,
-  "sma_slow": 2456.72
+  "sma_fast": 2443.02,
+  "sma_slow": 2457.23
 }
