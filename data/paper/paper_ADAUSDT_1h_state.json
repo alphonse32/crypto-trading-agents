@@ -266,12 +266,22 @@
       "time": "2026-09-06T17:00:00Z",
       "action": "KILL_SWITCH",
       "reason": "daily_loss"
+    },
+    {
+      "time": "2026-09-06T18:00:00Z",
+      "action": "KILL_SWITCH",
+      "reason": "daily_loss"
+    },
+    {
+      "time": "2026-09-06T19:00:00Z",
+      "action": "KILL_SWITCH",
+      "reason": "daily_loss"
     }
   ],
-  "last_processed_time": 1788714000000,
+  "last_processed_time": 1788721200000,
   "created_at": "2026-09-03T00:36:32Z",
-  "updated_at": "2026-09-06T18:50:14Z",
-  "last_close": 0.2179,
+  "updated_at": "2026-09-06T20:53:53Z",
+  "last_close": 0.2191,
   "mtm_equity": 9385.82,
   "signal": 1,
   "sma_fast": 0.22,
