@@ -3,17 +3,17 @@
   "interval": "1h",
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
-  "equity": 10306.137253953668,
+  "equity": 10151.375924940756,
   "position": 1,
   "entry_price": 103.281615,
   "entry_equity": 9990.0,
   "entry_time": "2026-09-05T12:00:00Z",
   "peak": 10357.401944189196,
-  "max_drawdown": 0.014942099364960867,
+  "max_drawdown": 0.019891669779604024,
   "killed": false,
   "kill_reason": null,
-  "current_day": "2026-09-06",
-  "day_start_equity": 9980.171204720222,
+  "current_day": "2026-09-07",
+  "day_start_equity": 10306.137253953668,
   "trades": [],
   "journal": [
     {
@@ -31,12 +31,12 @@
       "equity_after": 10000.0
     }
   ],
-  "last_processed_time": 1788735600000,
+  "last_processed_time": 1788750000000,
   "created_at": "2026-09-03T00:36:30Z",
-  "updated_at": "2026-09-07T00:10:40Z",
-  "last_close": 106.55,
-  "mtm_equity": 10306.14,
+  "updated_at": "2026-09-07T04:31:28Z",
+  "last_close": 104.95,
+  "mtm_equity": 10151.38,
   "signal": 1,
-  "sma_fast": 104.16,
-  "sma_slow": 102.99
+  "sma_fast": 104.46,
+  "sma_slow": 103.0
 }
