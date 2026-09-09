@@ -52,22 +52,28 @@ def send(title, message, priority="default", tags=None):
 
 def main():
     notified = load_notified()
+    new_notified = dict(notified)
     events = []
 
     for f in sorted(STATE_DIR.glob("paper_*_state.json")):
         s = json.loads(f.read_text(encoding="utf-8"))
         sym = s.get("symbol", f.stem)
-        last = notified.get(sym, "")
+        last = notified.get(sym)  # None si l'actif n'a jamais été notifié
+        max_t = last or ""
         for e in s.get("journal", []):
             t = e.get("time", "")
-            if e.get("action") in NOTABLE and t > last:
-                events.append((sym, e, t))
-                if t > last:
-                    last = t
-        notified[sym] = last
+            if e.get("action") in NOTABLE:
+                if t > max_t:
+                    max_t = t
+                # On ne notifie QUE les événements postérieurs à la baseline
+                # (évite de rejouer tout l'historique au premier lancement).
+                if last is not None and t > last:
+                    events.append((sym, e, t))
+        new_notified[sym] = max_t
 
     if not events:
-        print("[notify] aucun nouvel événement")
+        save_notified(new_notified)
+        print("[notify] baseline enregistrée, aucun événement à notifier")
         return 0
 
     for sym, e, t in events:
@@ -82,7 +88,7 @@ def main():
             send(f"🔴 Sortie — {sym}", f"{e.get('side', '?')} à {t} · equity {e.get('equity_after', '?')}",
                  priority="default", tags="chart_with_downwards_trend")
 
-    save_notified(notified)
+    save_notified(new_notified)
     print(f"[notify] {len(events)} événement(s) notifié(s)")
     return 0
 
