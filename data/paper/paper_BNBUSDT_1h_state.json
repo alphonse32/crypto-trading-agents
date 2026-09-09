@@ -3,7 +3,7 @@
   "interval": "1h",
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
-  "equity": 10342.37873117611,
+  "equity": 10451.935781573733,
   "position": 1,
   "entry_price": 724.0118249999999,
   "entry_equity": 9990.0,
@@ -31,12 +31,12 @@
       "equity_after": 10000.0
     }
   ],
-  "last_processed_time": 1788922800000,
+  "last_processed_time": 1788940800000,
   "created_at": "2026-09-03T00:36:31Z",
-  "updated_at": "2026-09-09T04:34:47Z",
-  "last_close": 749.55,
-  "mtm_equity": 10342.38,
+  "updated_at": "2026-09-09T09:09:42Z",
+  "last_close": 757.49,
+  "mtm_equity": 10451.94,
   "signal": 1,
-  "sma_fast": 747.22,
-  "sma_slow": 725.21
+  "sma_fast": 747.96,
+  "sma_slow": 726.78
 }
