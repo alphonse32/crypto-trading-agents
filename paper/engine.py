@@ -99,7 +99,7 @@ class PaperEngine:
     # --- RiskManager reconstruit depuis l'état ---------------------------
     def _make_risk(self):
         rm = RiskManager(self.limits, self.state["initial_equity"])
-        rm.equity = self.state["equity"]
+        rm.equity = self.state.get("mtm_equity", self.state["equity"])
         rm.peak = self.state["peak"]
         rm.max_drawdown = self.state["max_drawdown"]
         rm.killed = self.state["killed"]
@@ -109,7 +109,7 @@ class PaperEngine:
         return rm
 
     def _sync_risk(self, rm):
-        self.state["equity"] = rm.equity
+        # Ne PAS copier rm.equity (mark-to-market) dans state.equity (cash réalisé).
         self.state["peak"] = rm.peak
         self.state["max_drawdown"] = rm.max_drawdown
         self.state["killed"] = rm.killed
@@ -170,9 +170,10 @@ class PaperEngine:
                                   equity_after=round(self.state["equity"], 2))
 
         # Mark-to-market + mise à jour du risque (kill-switch).
+        was_killed = rm.killed
         mtm = self._mtm(close_price)
         rm.update(mtm, iso_time)
-        if rm.killed:
+        if rm.killed and not was_killed:
             self._journal(iso_time, "KILL_SWITCH", reason=rm.kill_reason)
             if self.state["position"] != 0:
                 self._close_position(close_price, iso_time)
