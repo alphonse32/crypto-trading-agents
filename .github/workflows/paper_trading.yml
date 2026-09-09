@@ -32,11 +32,16 @@ jobs:
             python agents/paper_agent.py --symbol "$sym" --interval 1h
           done
 
+      - name: Notify (ntfy)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python agents/notify.py
+
       - name: Commit state
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/paper/
+          git add data/paper/ data/notified.json
           if git diff --cached --quiet; then
             echo "Aucun changement d'état"
           else
