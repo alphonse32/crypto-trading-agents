@@ -39,10 +39,23 @@ class RiskManager:
 
     def update(self, equity_value, ts=None):
         """Alimente une nouvelle valeur d'equity (mark-to-market). Renvoie un événement ou None."""
-        if self.killed:
-            return None
-
         prev_equity = self.equity
+        day = ts[:10] if ts else None
+
+        # Changement de jour : nouvelle référence de perte quotidienne, et
+        # réarmement si le kill était un coupe-circuit journalier (daily_loss).
+        if day != self.current_day:
+            self.day_start_equity = prev_equity if self.current_day is not None else self.initial_equity
+            self.current_day = day
+            if self.killed and self.kill_reason == "daily_loss":
+                self.killed = False
+                self.kill_reason = None
+                self.kill_time = None
+                self.events.append({"type": "REARM", "reason": "new_day", "time": ts})
+
+        if self.killed:
+            return None  # kill permanent (total_loss / max_drawdown) toujours actif
+
         self.equity = equity_value
 
         if equity_value > self.peak:
@@ -54,11 +67,6 @@ class RiskManager:
         total_loss = ((self.initial_equity - equity_value) / self.initial_equity
                       if self.initial_equity > 0 else 0.0)
 
-        # Perte quotidienne : début de journée = clôture de la veille (approx).
-        day = ts[:10] if ts else None
-        if day != self.current_day:
-            self.day_start_equity = prev_equity if self.current_day is not None else self.initial_equity
-            self.current_day = day
         daily_loss = ((self.day_start_equity - equity_value) / self.day_start_equity
                       if self.day_start_equity > 0 else 0.0)
 
