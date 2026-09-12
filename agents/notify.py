@@ -79,13 +79,13 @@ def main():
     for sym, e, t in events:
         action = e.get("action")
         if action == "KILL_SWITCH":
-            send(f"⛔ Kill-switch — {sym}", f"Raison : {e.get('reason')} à {t}",
+            send(f"Kill-switch - {sym}", f"Raison: {e.get('reason')} ({t})",
                  priority="high", tags="rotating_light")
         elif action == "ENTRY":
-            send(f"🟢 Entrée — {sym}", f"{e.get('side', '?')} à {t} · prix {e.get('price', '?')}",
+            send(f"Entree - {sym}", f"{e.get('side', '?')} - prix {e.get('price', '?')} ({t})",
                  priority="default", tags="chart_with_upwards_trend")
         elif action == "EXIT":
-            send(f"🔴 Sortie — {sym}", f"{e.get('side', '?')} à {t} · equity {e.get('equity_after', '?')}",
+            send(f"Sortie - {sym}", f"{e.get('side', '?')} - equity {e.get('equity_after', '?')} ({t})",
                  priority="default", tags="chart_with_downwards_trend")
 
     save_notified(new_notified)
