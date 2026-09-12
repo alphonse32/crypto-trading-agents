@@ -3,17 +3,17 @@
   "interval": "1h",
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
-  "equity": 9385.817615151223,
+  "equity": 8882.165942986972,
   "position": 0,
-  "entry_price": 0.22341165,
-  "entry_equity": 9990.0,
-  "entry_time": "2026-09-03T21:00:00Z",
+  "entry_price": 0.2205102,
+  "entry_equity": 9376.431797536072,
+  "entry_time": "2026-09-09T12:00:00Z",
   "peak": 10101.268219450507,
-  "max_drawdown": 0.07082779991146526,
+  "max_drawdown": 0.12315610475541094,
   "killed": false,
   "kill_reason": null,
-  "current_day": "2026-09-09",
-  "day_start_equity": 9385.82,
+  "current_day": "2026-09-12",
+  "day_start_equity": 8882.165942986972,
   "trades": [
     {
       "entry_time": "2026-09-03T21:00:00Z",
@@ -23,6 +23,15 @@
       "exit_price": 0.2099,
       "return_pct": -0.00808845789971635,
       "pnl": -76.45931176821068
+    },
+    {
+      "entry_time": "2026-09-09T12:00:00Z",
+      "exit_time": "2026-09-10T19:00:00Z",
+      "side": "LONG",
+      "entry_price": 0.2205102,
+      "exit_price": 0.2090954,
+      "return_pct": -0.05366092681699064,
+      "pnl": -503.65167216425107
     }
   ],
   "journal": [
@@ -581,14 +590,42 @@
       "time": "2026-09-09T08:00:00Z",
       "action": "KILL_SWITCH",
       "reason": "daily_loss"
+    },
+    {
+      "time": "2026-09-09T12:00:00Z",
+      "action": "CHECK",
+      "target": 1,
+      "allowed": true,
+      "reason": "OK"
+    },
+    {
+      "time": "2026-09-09T12:00:00Z",
+      "action": "ENTRY",
+      "side": 1,
+      "price": 0.2205102,
+      "equity_after": 9385.82
+    },
+    {
+      "time": "2026-09-10T19:00:00Z",
+      "action": "CHECK",
+      "target": 0,
+      "allowed": true,
+      "reason": "OK (réduction du risque)"
+    },
+    {
+      "time": "2026-09-10T19:00:00Z",
+      "action": "EXIT",
+      "side": 1,
+      "price": 0.2090954,
+      "equity_after": 8882.17
     }
   ],
-  "last_processed_time": 1788951600000,
+  "last_processed_time": 1789236000000,
   "created_at": "2026-09-03T00:36:32Z",
-  "updated_at": "2026-09-09T12:10:50Z",
-  "last_close": 0.2203,
-  "mtm_equity": 9385.82,
-  "signal": 1,
-  "sma_fast": 0.22,
-  "sma_slow": 0.21
+  "updated_at": "2026-09-12T19:28:10Z",
+  "last_close": 0.2074,
+  "mtm_equity": 8882.17,
+  "signal": 0,
+  "sma_fast": 0.21,
+  "sma_slow": 0.22
 }

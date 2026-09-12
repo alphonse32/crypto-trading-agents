@@ -3,18 +3,28 @@
   "interval": "1h",
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
-  "equity": 10244.772842909446,
+  "equity": 9933.781633503013,
   "position": 1,
-  "entry_price": 2457.06792,
-  "entry_equity": 9990.0,
-  "entry_time": "2026-09-04T19:00:00Z",
+  "entry_price": 2514.546645,
+  "entry_equity": 9923.84785186951,
+  "entry_time": "2026-09-12T03:00:00Z",
   "peak": 10244.772842909446,
-  "max_drawdown": 0.02195682606344063,
+  "max_drawdown": 0.04162747595972568,
   "killed": false,
   "kill_reason": null,
-  "current_day": "2026-09-09",
-  "day_start_equity": 10103.810805523031,
-  "trades": [],
+  "current_day": "2026-09-12",
+  "day_start_equity": 9933.781633503013,
+  "trades": [
+    {
+      "entry_time": "2026-09-04T19:00:00Z",
+      "exit_time": "2026-09-11T02:00:00Z",
+      "side": "LONG",
+      "entry_price": 2457.06792,
+      "exit_price": 2445.686545,
+      "return_pct": -0.030356086384255354,
+      "pnl": -310.991209406433
+    }
+  ],
   "journal": [
     {
       "time": "2026-09-04T19:00:00Z",
@@ -29,14 +39,42 @@
       "side": 1,
       "price": 2457.06792,
       "equity_after": 10000.0
+    },
+    {
+      "time": "2026-09-11T02:00:00Z",
+      "action": "CHECK",
+      "target": 0,
+      "allowed": true,
+      "reason": "OK (réduction du risque)"
+    },
+    {
+      "time": "2026-09-11T02:00:00Z",
+      "action": "EXIT",
+      "side": 1,
+      "price": 2445.686545,
+      "equity_after": 9933.78
+    },
+    {
+      "time": "2026-09-12T03:00:00Z",
+      "action": "CHECK",
+      "target": 1,
+      "allowed": true,
+      "reason": "OK"
+    },
+    {
+      "time": "2026-09-12T03:00:00Z",
+      "action": "ENTRY",
+      "side": 1,
+      "price": 2514.546645,
+      "equity_after": 9933.78
     }
   ],
-  "last_processed_time": 1788951600000,
+  "last_processed_time": 1789236000000,
   "created_at": "2026-09-03T00:26:54Z",
-  "updated_at": "2026-09-09T12:10:46Z",
-  "last_close": 2501.0,
-  "mtm_equity": 10168.62,
+  "updated_at": "2026-09-12T19:28:05Z",
+  "last_close": 2522.38,
+  "mtm_equity": 9954.76,
   "signal": 1,
-  "sma_fast": 2489.38,
-  "sma_slow": 2465.98
+  "sma_fast": 2506.63,
+  "sma_slow": 2487.28
 }

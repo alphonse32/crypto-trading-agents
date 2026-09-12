@@ -3,18 +3,28 @@
   "interval": "1h",
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
-  "equity": 10451.935781573733,
-  "position": 1,
+  "equity": 9850.998009079412,
+  "position": 0,
   "entry_price": 724.0118249999999,
   "entry_equity": 9990.0,
   "entry_time": "2026-09-03T22:00:00Z",
   "peak": 10718.515405463164,
-  "max_drawdown": 0.05433761151375502,
+  "max_drawdown": 0.0915925387160309,
   "killed": false,
   "kill_reason": null,
-  "current_day": "2026-09-09",
-  "day_start_equity": 10376.46008060711,
-  "trades": [],
+  "current_day": "2026-09-12",
+  "day_start_equity": 9850.998009079412,
+  "trades": [
+    {
+      "entry_time": "2026-09-03T22:00:00Z",
+      "exit_time": "2026-09-10T20:00:00Z",
+      "side": "LONG",
+      "entry_price": 724.011825,
+      "exit_price": 714.652495,
+      "return_pct": -0.0574953563677405,
+      "pnl": -600.9377724943206
+    }
+  ],
   "journal": [
     {
       "time": "2026-09-03T22:00:00Z",
@@ -29,14 +39,28 @@
       "side": 1,
       "price": 724.011825,
       "equity_after": 10000.0
+    },
+    {
+      "time": "2026-09-10T20:00:00Z",
+      "action": "CHECK",
+      "target": 0,
+      "allowed": true,
+      "reason": "OK (réduction du risque)"
+    },
+    {
+      "time": "2026-09-10T20:00:00Z",
+      "action": "EXIT",
+      "side": 1,
+      "price": 714.652495,
+      "equity_after": 9851.0
     }
   ],
-  "last_processed_time": 1788951600000,
+  "last_processed_time": 1789236000000,
   "created_at": "2026-09-03T00:36:31Z",
-  "updated_at": "2026-09-09T12:10:48Z",
-  "last_close": 750.24,
-  "mtm_equity": 10351.9,
-  "signal": 1,
-  "sma_fast": 748.36,
-  "sma_slow": 727.65
+  "updated_at": "2026-09-12T19:28:07Z",
+  "last_close": 729.31,
+  "mtm_equity": 9851.0,
+  "signal": 0,
+  "sma_fast": 724.43,
+  "sma_slow": 738.14
 }
