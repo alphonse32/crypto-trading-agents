@@ -4,10 +4,10 @@
   "strategy": "SMA_CROSS_50_200",
   "initial_equity": 10000.0,
   "equity": 9761.459012867734,
-  "position": 0,
-  "entry_price": 0.24262124999999998,
-  "entry_equity": 9708.940002630692,
-  "entry_time": "2026-09-29T01:00:00Z",
+  "position": 1,
+  "entry_price": 0.27133559999999995,
+  "entry_equity": 9751.697553854867,
+  "entry_time": "2026-10-05T06:00:00Z",
   "peak": 10568.015474089198,
   "max_drawdown": 0.13424457096348855,
   "killed": false,
@@ -725,14 +725,28 @@
       "side": 1,
       "price": 0.24417785,
       "equity_after": 9761.46
+    },
+    {
+      "time": "2026-10-05T06:00:00Z",
+      "action": "CHECK",
+      "target": 1,
+      "allowed": true,
+      "reason": "OK"
+    },
+    {
+      "time": "2026-10-05T06:00:00Z",
+      "action": "ENTRY",
+      "side": 1,
+      "price": 0.2713356,
+      "equity_after": 9761.46
     }
   ],
-  "last_processed_time": 1791176400000,
+  "last_processed_time": 1791208800000,
   "created_at": "2026-09-03T00:36:32Z",
-  "updated_at": "2026-10-05T06:20:54Z",
-  "last_close": 0.2697,
-  "mtm_equity": 9761.46,
-  "signal": 0,
+  "updated_at": "2026-10-05T15:01:12Z",
+  "last_close": 0.2684,
+  "mtm_equity": 9646.19,
+  "signal": 1,
   "sma_fast": 0.25,
   "sma_slow": 0.25
 }
