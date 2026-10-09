@@ -135,6 +135,21 @@ class SmaCross:
         return 1 if f > s else 0
 
 
+class SmaCrossLongShort:
+    """Croisement SMA long/short : long si SMA rapide > SMA lente, sinon short."""
+
+    def __init__(self, data, fast=50, slow=200):
+        self.fast_sma = sma(data["close"], fast)
+        self.slow_sma = sma(data["close"], slow)
+        self.name = f"SMA_CROSS_LS_{fast}_{slow}"
+
+    def signal(self, i):
+        f, s = self.fast_sma[i], self.slow_sma[i]
+        if f is None or s is None:
+            return 0
+        return 1 if f > s else -1
+
+
 class EmaCross:
     """Croisement de moyennes mobiles exponentielles (tendance)."""
 
