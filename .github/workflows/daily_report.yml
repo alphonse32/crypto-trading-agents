@@ -1,0 +1,27 @@
+name: Daily Report
+
+on:
+  schedule:
+    # 20:00 UTC = 20h heure du Burkina Faso (GMT).
+    - cron: '0 20 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Send daily report
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python agents/daily_report.py
