@@ -66,7 +66,7 @@ def main():
     lines.append(f"Positions long : {n_long}/{len(rows)} · kill-switch : {n_killed}")
 
     msg = "\n".join(lines)
-    ok = send("Rapport trading quotidien", msg, priority="default", tags="bar_chart")
+    ok = send("Rapport trading quotidien", msg, priority="high", tags="bar_chart")
     print(f"[rapport] envoyé={ok}")
     return 0 if ok else 1
 
