@@ -9,7 +9,7 @@
   "entry_equity": 9055.936759641647,
   "entry_time": "2026-10-21T17:00:00Z",
   "peak": 10244.772842909446,
-  "max_drawdown": 0.1433416937138554,
+  "max_drawdown": 0.15676479919998187,
   "killed": false,
   "kill_reason": null,
   "current_day": "2026-10-22",
@@ -217,12 +217,12 @@
       "equity_after": 9065.0
     }
   ],
-  "last_processed_time": 1792645200000,
+  "last_processed_time": 1792666800000,
   "created_at": "2026-09-03T00:26:54Z",
-  "updated_at": "2026-10-22T06:43:05Z",
-  "last_close": 2438.55,
-  "mtm_equity": 8776.27,
+  "updated_at": "2026-10-22T12:26:16Z",
+  "last_close": 2400.34,
+  "mtm_equity": 8638.75,
   "signal": 1,
-  "sma_fast": 2449.78,
-  "sma_slow": 2431.16
+  "sma_fast": 2452.14,
+  "sma_slow": 2428.34
 }
