@@ -240,12 +240,12 @@
       "equity_after": 8659.04
     }
   ],
-  "last_processed_time": 1792962000000,
+  "last_processed_time": 1792969200000,
   "created_at": "2026-09-03T00:26:54Z",
-  "updated_at": "2026-10-25T22:07:22Z",
-  "last_close": 2332.38,
+  "updated_at": "2026-10-26T00:16:27Z",
+  "last_close": 2329.87,
   "mtm_equity": 8659.04,
   "signal": 0,
-  "sma_fast": 2356.38,
-  "sma_slow": 2403.91
+  "sma_fast": 2353.8,
+  "sma_slow": 2403.08
 }
