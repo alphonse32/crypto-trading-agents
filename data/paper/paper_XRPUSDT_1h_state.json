@@ -12,7 +12,7 @@
   "max_drawdown": 0.2007184133848598,
   "killed": true,
   "kill_reason": "max_drawdown",
-  "current_day": "2026-11-05",
+  "current_day": "2026-11-06",
   "day_start_equity": 8092.04,
   "trades": [
     {
@@ -308,12 +308,12 @@
       "equity_after": 8092.04
     }
   ],
-  "last_processed_time": 1793912400000,
+  "last_processed_time": 1793926800000,
   "created_at": "2026-09-03T00:36:31Z",
-  "updated_at": "2026-11-05T22:16:59Z",
-  "last_close": 1.2221,
+  "updated_at": "2026-11-06T02:36:54Z",
+  "last_close": 1.2168,
   "mtm_equity": 8092.04,
   "signal": 1,
-  "sma_fast": 1.29,
+  "sma_fast": 1.28,
   "sma_slow": 1.27
 }
